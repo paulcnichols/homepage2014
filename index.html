@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,600' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background-color: #546172;
+        }
+        * {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            transition: all .2s;
+        }
+        .background {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        .taupeified {
+            position: absolute;
+            z-index: -1;
+        }   
+        .body {
+            max-width: 980px;
+            margin: 0 auto;
+            top: 50px;
+            bottom: 50px;
+            overflow: auto;
+            background: #eee;
+            border: solid 5px white;
+            padding: 20px;
+            color: #555;
+        }     
+        .headshot {
+            display: inline-block;
+            width: 180px;
+            border: solid 5px white;
+        }
+        .header-text {
+            display: inline-block;
+            padding-left: 80px;
+        }
+        .header-text a {
+            text-decoration: none;
+        }
+        .header-text a img {
+            height: 18px;
+        }
+        @media (max-width: 779px) {
+            .headshot{
+                display: block;
+                float: none;
+                margin: 0 auto;
+                width: auto;                
+            }
+            .header-text {
+                display: block;
+                padding-left: 0px;
+            }
+            .header h1, .header p {
+                text-align: center;
+            }
+        }
+        .header h1 {
+            font-size: 60px;
+            white-space: nowrap;
+            margin: 0px;
+        }
+        .header p {
+            font-size: 24px;
+            font-weight: 400;
+            color: #aaa;
+            margin: 0px;
+        }
+        .bio {
+            margin-top: 40px;
+        }
+        .bio > h2 {
+            font-size: 40px;
+            white-space: nowrap;
+            margin: 10px 0px 10px 0px;
+        }
+        .bio > p {
+            font-size: 20px;
+            margin: 15px 0px 5px 0px;
+            color: #333;
+        }
+        .bio a {
+            color: #546172;
+            text-decoration: none;
+        }
+        .bio a:hover {
+            color:  #87A581;
+        }
+        .bio ul {
+            list-style: none;
+            padding: 0px;
+        }
+        .bio ul li {
+            padding: 1px;
+        }
+        .bio .date {
+            font-weight: 600;
+            width: 250px;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+    </style>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31850153-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="body">
+
+        <div class="header">
+            <img class="headshot" src="http://paulcnichols.com/img/headshot2.png"></img>
+            <div class="header-text">
+                <h1>Paul C. Nichols</h1>
+                <p>software engineer - san francisco, ca</p>
+                <p>
+                    <a href="http://www.linkedin.com/in/paulcnichols">
+                      <img src="http://paulcnichols.com/img/linkedin.ico" height="15" alt="LinkedIn">
+                    </a>
+                    <a href="http://twitter.com/paul_c_nichols">
+                        <img src="http://paulcnichols.com/img/twitter.ico" height="15" alt="Twitter">
+                    </a>
+                    <a href="http://www.facebook.com/paul.c.nichols">
+                        <img src="http://paulcnichols.com/img/facebook.ico" height="15" alt="Facebook">
+                    </a>
+                    <a href="http://github.com/paulcnichols">
+                        <img src="http://paulcnichols.com/img/github.ico"  height="15" alt="Github">
+                    </a>
+                    <a href="http://blog.paulcnichols.com">
+                        <img src="http://paulcnichols.com/img/tumblr.ico" height="15" alt="Tumblr">
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="bio">
+            <h2>About</h2>
+            <p>
+            I am a software engineer in the Bay Area. I was twice educated in sunny San Diego at the amazing <a href="http://cse.ucsd.edu/">UCSD</a> in Computer Science (B.S. 2006, M.S 2012).  My emphasis during grad school was AI/Machine Learning.
+            </p>
+            <h2>Recent Work</h2>
+            <p>
+            I currently work at an early stage startup, <a href="http://avinetworks.com">Avi Networks</a>, developing a "top secret" solution for virtualized data centers.  My most recent work at Avi is front end development, but I originally joined as more of a backend engineer and was responsible for the original Django app and REST API.
+            </p>
+            <p>
+            Prior to Avi, I was at <a href="http://websense.com">Websense</a> where I was heavilly involved in scaling up the backend infrastructure for the Threat Seeker Network.  There my work was largely focused on distributed systems, text processing, and big data.
+            </p>
+            <h2>Recent Blog Posts</h2>
+            <ul> 
+                <script type="text/javascript" src="http://blog.paulcnichols.com/api/read/json"></script>
+                <script type="text/javascript">
+                for (var i=0; i < 10; ++i) {
+                    var title = ' - ';
+                    if (tumblr_api_read.posts[i]['type'] == 'regular') {
+                        title += tumblr_api_read.posts[i]['regular-title'];
+                    }
+                    else if (tumblr_api_read.posts[i]['type'] == 'quote') {
+                        title += 'Quote...';
+                    }
+                    else if (tumblr_api_read.posts[i]['type'] == 'link') {
+                        title += tumblr_api_read.posts[i]['link-text'];
+                    }
+                    else {
+                        title += 'Other...';
+                    }
+                    document.write('<li><a href="'+tumblr_api_read.posts[i].url+'"><span class="date">'+tumblr_api_read.posts[i]['date'] + '</span><span class="title">' + title + '</span></a></li>');
+                }
+                </script>
+            </ul>
+        </div>
+    </div>
+
+    <!-- le scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    (function ($) {
+        var globalArgs = {
+            minWidth: 150,
+            minHeight: 150,
+        }
+        var colorIndex = 0;
+        var taupeifyRec = function (args) {
+            var x = .5*args.width, //(Math.random()*.50 + .25)*args.width,
+                y = .5*args.height, //(Math.random()*.50 + .25)*args.height,
+                c = ["#546172", "#87A581", "#C0BD86", "#D6C08F", "#DA6A44", "#324152", "#47535E", "#796466", "#C1836A", "#DEA677"];
+
+            var w = (x > globalArgs.minWidth && (args.width - x) > globalArgs.minWidth),
+                h = (y > globalArgs.minHeight && (args.height - y) > globalArgs.minHeight);
+            if (w && h) {
+                // (0,0)
+                taupeifyRec({left: args.left, width: x, top: args.top, height: y, parent: args.parent});
+                // (1, 0)
+                taupeifyRec({left: args.left + x, width: args.width - x, top: args.top, height: y, parent: args.parent});
+                // (0, 1)
+                taupeifyRec({left: args.left, width: x, top: args.top + y, height: args.height - y, parent: args.parent});
+                // (1, 1)
+                taupeifyRec({left: args.left + x, width: args.width - x, top: args.top + y, height: args.height - y, parent: args.parent});
+            } 
+            else if (w && !h) {
+                // (0, *)
+                taupeifyRec({left: args.left, width: x, top: args.top,  height: args.height, parent: args.parent});
+                // (1, *)
+                taupeifyRec({left: args.left + x, width: args.width - x, top: args.top,  height: args.height, parent: args.parent});
+            }
+            else if (!w && h) {
+                // ((*, 0)
+                taupeifyRec({left: args.left, width: args.width, top: args.top,  height: y, parent: args.parent});
+                // (*, 1)
+                taupeifyRec({left: args.left, width: args.width, top: args.top + y,  height: args.height - y, parent: args.parent});
+            }
+            else {
+                $('<div class="taupeified"></div>')
+                    .css('top', args.top)
+                    .css('left', args.left)
+                    .css('height', args.height)
+                    .css('width', args.width)
+                    .css('background-color', c[++colorIndex%c.length]) //c[Math.floor(Math.random()*c.length)])
+                    .appendTo(args.parent);
+                return;
+            }
+        };
+
+        $.fn.taupeify = function (args) {
+            var parent = this, 
+                resizeTimer, 
+                startTaupeify = function () {
+                    // remove previous 
+                    colorIndex = 0;
+                    $('.taupeified').remove();
+
+                    // redo
+                    taupeifyRec({
+                        parent: parent,
+                        width: parent.width(),
+                        height: parent.height(),
+                        top: parent.offset().top,
+                        left: parent.offset().left
+                    });
+            };
+
+            $(window).resize(function () {
+                if (resizeTimer) {
+                    clearTimeout(resizeTimer);
+                }
+                resizeTimer = setTimeout(function () {
+                    startTaupeify();
+                    resizeTimer = null;
+                }, 100);
+            });
+            startTaupeify();
+        };
+    })(jQuery);
+
+    $('.background').taupeify();
+    </script>
+</body>
+</html>
